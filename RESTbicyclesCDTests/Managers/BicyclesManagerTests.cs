@@ -17,7 +17,7 @@ namespace RESTbicyclesCD.Managers.Tests
         {
             BicyclesManager manager = new BicyclesManager();
             List<Bicycle> all = manager.GetAll();
-            Assert.AreEqual(2, all.Count);
+            Assert.AreEqual(20, all.Count);
         }
     }
 }
