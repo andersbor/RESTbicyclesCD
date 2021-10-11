@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RESTbicyclesCD.Models;
 
 namespace RESTbicyclesCD.Managers
@@ -15,6 +16,11 @@ namespace RESTbicyclesCD.Managers
         public List<Bicycle> GetAll()
         {
             return Data;
+        }
+
+        public Bicycle GetById(int id)
+        {
+            return Data.FirstOrDefault(bicycle => bicycle.Id == id);
         }
     }
 }

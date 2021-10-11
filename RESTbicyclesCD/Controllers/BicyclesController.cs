@@ -20,9 +20,9 @@ namespace RESTbicyclesCD.Controllers
 
         // GET api/<BicyclesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Bicycle Get(int id)
         {
-            return "value";
+            return _manager.GetById(id);
         }
 
         // POST api/<BicyclesController>
