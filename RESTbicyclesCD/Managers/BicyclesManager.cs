@@ -22,5 +22,12 @@ namespace RESTbicyclesCD.Managers
         {
             return Data.FirstOrDefault(bicycle => bicycle.Id == id);
         }
+
+        public Bicycle Add(Bicycle bicycle)
+        {
+            bicycle.Id = _nextId++;
+            Data.Add(bicycle);
+            return bicycle;
+        }
     }
 }

@@ -27,8 +27,9 @@ namespace RESTbicyclesCD.Controllers
 
         // POST api/<BicyclesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public Bicycle Post([FromBody] Bicycle value)
         {
+            return _manager.Add(value);
         }
 
         // PUT api/<BicyclesController>/5
