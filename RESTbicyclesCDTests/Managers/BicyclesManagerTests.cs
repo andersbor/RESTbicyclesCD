@@ -1,18 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RESTbicyclesCD.Managers;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RESTbicyclesCD.Models;
 
 namespace RESTbicyclesCD.Managers.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class BicyclesManagerTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void GetAllTest()
         {
             BicyclesManager manager = new BicyclesManager();
@@ -26,7 +21,5 @@ namespace RESTbicyclesCD.Managers.Tests
             Assert.AreEqual(ny.Brand, ny2.Brand);
             Assert.AreEqual(3, ny2.Id);
         }
-
-
     }
 }
