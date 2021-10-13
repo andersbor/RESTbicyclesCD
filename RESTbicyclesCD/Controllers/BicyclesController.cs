@@ -26,6 +26,7 @@ namespace RESTbicyclesCD.Controllers
         }
 
         // POST api/<BicyclesController>
+        // kommentar
         [HttpPost]
         public Bicycle Post([FromBody] Bicycle value)
         {
