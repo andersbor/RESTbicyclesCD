@@ -19,7 +19,9 @@ namespace RESTbicyclesCD.Managers.Tests
             List<Bicycle> all = manager.GetAll();
             Assert.AreEqual(2, all.Count);
 
-            Bicycle ny = new Bicycle() {Brand = "Nishiki"};
+            Assert.IsNull(manager.GetById(-1));
+
+            Bicycle ny = new Bicycle {Brand = "Nishiki"};
             Bicycle ny2= manager.Add(ny);
             Assert.AreEqual(ny.Brand, ny2.Brand);
             Assert.AreEqual(3, ny2.Id);
